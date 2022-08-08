@@ -1,0 +1,153 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/*-- base styles --*/
+.base-page {
+  /* background-color: aqua; */
+  height: 100%;
+  width: 100%;
+}
+div.base-card {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 60%;
+  height: 60%;
+  border-radius: 16px;
+  padding: 25px 0px 50px 0px;
+  /* border: 0px solid #00000033; */
+  box-shadow: 0px 0px 20px #26262640;
+}
+div.align-mid {
+  width: 50%;
+  margin: auto;
+}
+
+/*-- base styles end --*/
+
+/*-- header and bio --*/
+
+h1 {
+  text-align: left;
+}
+div.bio-container {
+  text-align: justify;
+}
+div.bio-container p {
+  color: black;
+  font-weight: 500;
+}
+
+/* -- header and bio end -- */
+
+/* -- contact, cv, image --  */
+a.contact-anchor {
+  width: 120px;
+  border-radius: 50px;
+  border: 0;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  margin-top: 25px;
+  display: block;
+  cursor: pointer;
+}
+a.contact-anchor:hover {
+  transform: scale(0.99);
+  background-color: rgb(77, 77, 77);
+}
+a.contact-anchor p {
+  /* margin: auto; */
+  padding-left: 27px;
+  padding-top: 7px;
+  font-size: 17px;
+}
+a.cv-anchor {
+  font-weight: 500;
+  margin-top: 5px;
+  border: 0;
+  background-color: inherit;
+  font-size: medium;
+  cursor: pointer;
+  color: black;
+}
+div.cv-container {
+  width: 145px;
+  height: 20px;
+  padding: 0px;
+  margin: 10px 0px 35px 0px;
+}
+.cv-text {
+  margin-top: 0;
+}
+div.cv-container:hover {
+  transform: scale(0.99);
+  /* background-color: rgb(116, 71, 71); */
+}
+a.cv-anchor p {
+  display: inline-block;
+}
+a.cv-anchor img {
+  width: 25px;
+  height: 20px;
+  margin-left: 3px;
+}
+div.social-container {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+div.image-container {
+  margin-top: 5px;
+  text-align: center;
+  box-shadow: 0px 0px 15px #00000040;
+  border-radius: 5px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+}
+div.image-container img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  /* border: 1px solid #00000033; */
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  object-fit: cover;
+}
+div.image-container h3 {
+  margin: 0px 0px 0px 0px;
+}
+div.image-container p {
+  margin-top: 0px;
+  font-size: smaller;
+}
+.profile-picture {
+  margin-bottom: 5px;
+}
+.social-anchor {
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+}
+.social-icons {
+  width: 30px;
+}
+.social-icons:hover {
+  transform: scale(1.01);
+}
+
+/* -- contact, cv, image end --  */
+
+/* Day-1 end */
