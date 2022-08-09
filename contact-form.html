@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Creating Form and Layouting</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="left-nav">
+        <a href="#">
+          <img src="./assets/icons/dumbways_logo.png" alt="" />
+        </a>
+        <ul>
+          <li>
+            <a href="./index.html" style="font-weight: 900">Home</a>
+          </li>
+          <li>
+            <a href="#">My Project</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right-nav">
+        <a href="./contact-form.html">Contact Me</a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- contact form -->
+    <div class="base-page-container">
+      <div class="align-center">
+        <h3>GET IN TOUCH</h3>
+        <form action="" method="" class="contact-form">
+          <div>
+            <label for name>Name :</label>
+            <input type="text" id="name" placeholder="ex: John Doe" required />
+          </div>
+
+          <div>
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@email.com"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="password">Phone Number:</label>
+            <input
+              type="text"
+              id="phone"
+              placeholder="(+62) 000-0000-0000"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="subject">Subject :</label>
+            <select id="subject" required>
+              <option hidden="hidden"></option>
+              <option value="talk">Lets talk</option>
+              <option value="collaborate">Lets Collaboration</option>
+              <option value="hiring">I'm Hiring</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="textarea-label">Message :</label>
+            <textarea
+              id="message"
+              rows="10"
+              cols="10"
+              placeholder="Tell us about your concerns..."
+              required
+            ></textarea>
+          </div>
+          <div class="btn-container">
+            <a href="#">
+              <button type="submit" class="form-btn">Submit</button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- contact form end -->
+  </body>
+</html>
