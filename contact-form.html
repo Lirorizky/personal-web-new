@@ -27,7 +27,7 @@
             <a href="./index.html" style="font-weight: 900">Home</a>
           </li>
           <li>
-            <a href="#">My Project</a>
+            <a href="./project-form.html">My Project</a>
           </li>
         </ul>
       </div>
@@ -43,8 +43,14 @@
         <h3>GET IN TOUCH</h3>
         <form action="" method="" class="contact-form">
           <div>
-            <label for name>Name :</label>
-            <input type="text" id="name" placeholder="ex: John Doe" required />
+            <label for="name">Name :</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="ex: John Doe"
+              required
+              class="input-contact-form"
+            />
           </div>
 
           <div>
@@ -54,25 +60,27 @@
               id="email"
               placeholder="you@email.com"
               required
+              class="input-contact-form"
             />
           </div>
 
           <div>
-            <label for="password">Phone Number:</label>
+            <label for="phone">Phone Number:</label>
             <input
               type="text"
               id="phone"
               placeholder="(+62) 000-0000-0000"
               required
+              class="input-contact-form"
             />
           </div>
 
           <div>
             <label for="subject">Subject :</label>
-            <select id="subject" required>
+            <select id="subject" required class="select-contact-form">
               <option hidden="hidden"></option>
-              <option value="Let's talk">Let's talk</option>
-              <option value="Let's collaborate">Let's Collaborate</option>
+              <option value="Lets talk">Let's talk</option>
+              <option value="Let's collaborate">Lets Collaborate</option>
               <option value="I'm hiring">I'm Hiring</option>
             </select>
           </div>
@@ -83,13 +91,14 @@
               id="message"
               rows="10"
               cols="10"
-              placeholder="Tell us about your concerns..."
+              placeholder="Tell me a little about your concern..."
               required
+              class="textarea-contact-form"
             ></textarea>
           </div>
           <div class="btn-container">
             <a href="#">
-              <button type="submit" class="form-btn" onclick="submitForm()">
+              <button type="submit" class="form-btn" onClick="submitForm()">
                 Submit
               </button>
             </a>
@@ -98,6 +107,7 @@
       </div>
     </div>
     <!-- contact form end -->
-    <script type="text/javascript" src="./script.js"></script>
+
+    <script type="text/javascript" src="./contact.js"></script>
   </body>
 </html>
