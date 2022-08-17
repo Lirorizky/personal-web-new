@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Project List</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/JavaScript"
+      src="https://MomentJS.com/downloads/moment-with-locales.js"
+    ></script>
+
+    <!-- bootstrap -->
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/icons/dumbways_logo.png" alt="" />
+        </a>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-lg-between"
+          id="navbarSupportedContent"
+        >
+          <!-- left -->
+          <div class="left-side-nav">
+            <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link me-3" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active active-page"
+                  aria-current="page"
+                  href="./project.html"
+                  >Add project</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- right -->
+          <div class="right-side-nav d-flex" role="search">
+            <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="contact-nav nav-link ms-3 btn btn-dark text-white rounded-pill pe-3 ps-3 pb-1 pt-1"
+                  aria-current="page"
+                  href="./contact-form.html"
+                  >Contact Me</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- project form -->
+
+    <div
+      class="base-page-container d-flex justify-content-center align-items-center"
+    >
+      <div class="align-center h-100 w-25">
+        <form
+          class="contact-form"
+          action="index.html"
+          onsubmit="addProject(event)"
+        >
+          <h4 class="text-center mt-4">Add Project</h4>
+
+          <!-- project name -->
+          <div class="project-name-input mb-3">
+            <label for="project-name" class="form-label mt-3"
+              >Project Name</label
+            >
+            <input
+              type="text"
+              class="form-control project-input w-100 rounded-2 text-dark mb-2 shadow"
+              id="project-name"
+              aria-describedby="nameProjectHelp"
+            />
+            <div id="nameProjectHelp" class="form-text">
+              Please input the project name.
+            </div>
+          </div>
+          <!-- project name end -->
+
+          <!-- project date input -->
+          <div class="date-input mb-3 d-flex">
+            <div class="left-date w-100 me-1">
+              <label for="project-start-date" class="form-label"
+                >Start Date</label
+              >
+              <input
+                type="date"
+                class="form-control project-input w-100 rounded-2 text-dark mb-2 shadow"
+                id="project-start-date"
+                aria-describedby="startDateHelp"
+              />
+            </div>
+            <div class="right-date w-100 ms-1">
+              <label for="project-end-date" class="form-label">End Date</label>
+              <input
+                type="date"
+                class="form-control project-input w-100 rounded-2 text-dark mb-2 shadow"
+                id="project-end-date"
+                aria-describedby="endDateHelp"
+              />
+            </div>
+          </div>
+          <!-- project date input end -->
+
+          <!-- project description -->
+
+          <div class="form-floating mb-3">
+            <textarea
+              class="form-control project-textarea w-100 rounded-2 text-dark mb-2 shadow"
+              placeholder="Leave a comment here"
+              rows="10"
+              cols="10"
+              id="project-description"
+              style="height: 100px"
+            ></textarea>
+            <label for="project-description">Description</label>
+          </div>
+
+          <!-- project description end -->
+
+          <!-- tech checkbox -->
+
+          <div class="tech-container">
+            <label for="tech-label">Technologies :</label>
+            <div class="tech-stacks d-flex justify-content-between mt-2">
+              <div class="mb-3 form-check left-tech">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="nodejs"
+                    value="nodejs"
+                    name="tech-checkbox"
+                  />
+                  <label class="form-check-label" for="nodejs">nodeJS</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="reactjs"
+                    value="reactjs"
+                    name="tech-checkbox"
+                  />
+                  <label class="form-check-label" for="reactjs">reactJS</label>
+                </div>
+              </div>
+              <div class="mb-3 form-check right-tech">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="nextjs"
+                    value="nextjs"
+                    name="tech-checkbox"
+                  />
+                  <label class="form-check-label" for="nextjs">nextJS</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="typescript"
+                    value="typescript"
+                    name="tech-checkbox"
+                  />
+                  <label class="form-check-label" for="typescript"
+                    >typescript</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 project-file-input">
+            <label for="project-upload-image" class="form-label input-img"
+              >Upload</label
+            >
+            <input
+              class="form-control w-100 rounded-2 text-dark mb-2 shadow"
+              type="file"
+              id="project-upload-image"
+            />
+          </div>
+          <div class="btn-container d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary ps-4 pe-4 rounded-5">
+              Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- project form end -->
+
+    <script src="./project-form.js"></script>
+    <!-- <script src="./project-detail.js"></script> -->
+  </body>
+</html>

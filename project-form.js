@@ -47,38 +47,54 @@ function displayProject() {
   let lengthProjects = projects.length;
 
   for(i = 0; i < lengthProjects; i++){
-    projectContainer.innerHTML += `
-    <div class="project-card">
-          <a href="./project-detail.html" class="detail-link">
-            <div class="project-card-info">
-              <div class="project-card-img">
-                <img src="${projects[i].projectImage}" />
-              </div>
-              <div class="project-card-header">
-                <p>${projects[i].projectName}</p>
-              </div>
-              <div class="project-card-duration">
-                <p>${projectDurationTime(projects[i].projectStartDate, projects[i].projectEndDate)}</p>
-              </div>
-              <div class="project-card-desc">
-                <p>
-                  ${projects[i].projectDescription}
-                </p>
-              </div>
-              <div class="project-card-tech">
-                ${projects[i].showIcon}
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <a href="#" class="edit-btn">
-                <button type="button">edit</button>
+    projectContainer.innerHTML += ` 
+      <div class="card shadow rounded-4 mt-5" style="width: 20rem">
+              <a
+                href="/project/1"
+                class="text-decoration-none text-dark"
+              >
+                <img
+                  src="${projects[i].projectImage}"
+                  class="card-img-top rounded-top"
+                  alt="..."
+                />
               </a>
-              <a href="#" class="delete-btn">
-                <button type="button">delete</button>
-              </a>
-            </div>
-          </a>
-      </div>`
+              <div class="card-body">
+                <a
+                  href="/project/1"
+                  class="text-decoration-none text-dark"
+                >
+                  <h5 class="card-title fs-6 fw-semibold">
+                    ${projects[i].projectName}
+                  </h5>
+                  <div class="project-card-duration">
+                    <p>${projectDurationTime(projects[i].projectStartDate, projects[i].projectEndDate)}</p>
+                  </div>
+                  <p class="card-text">
+                    ${projects[i].projectDescription}
+                  </p>
+                  <div class="project-card-tech">
+                    ${projects[i].showIcon}
+                  </div>
+                </a>
+                {{#if isLogin}}
+                <div
+                  class="project-card-actions d-flex mt-3 justify-content-betwee"
+                >
+                  <a
+                    href="#"
+                    class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold"
+                    >Edit</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-block btn-danger mt-2 rounded-5 w-100 ms-1 fw-semibold"
+                    >Delete</a
+                  >
+                </div>
+                {{/if}}
+              </div>
+            </div>`
   }
   alert('Your project has been successfully updated.');
 }
@@ -117,39 +133,66 @@ function projectDurationTime(a, b){
 }
 
 function firstProjectDisplay() {
-  return `<div class="project-card">
-          <a href="./project-detail.html" class="detail-link">
-            <div class="project-card-info">
-              <div class="project-card-img">
-                <img src="./assets/images/holding_phone.jpg" />
-              </div>
-              <div class="project-card-header">
-                <p>Dumbways Mobile App - 2022</p>
-              </div>
-              <div class="project-card-duration">
-                <p>Duration : 3 Months</p>
-              </div>
-              <div class="project-card-desc">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellat corporis magni suscipit libero exercitationem!
-                  Aperiam
-                </p>
-              </div>
-              <div class="project-card-tech">
-                <img src="./assets/icons/playstore-color.png" alt="" />
-                <img src="./assets/icons/android-color.png" alt="" />
-                <img src="./assets/icons/javacolor.png" alt="" />
-              </div>
-            </div>
-            <div class="project-card-actions">
-              <a href="#" class="edit-btn">
-                <button type="button">edit</button>
+  return `<div class="card shadow rounded-4 mt-5" style="width: 20rem">
+              <a
+                href="./project-detail.html" class="detail-link"
+                class="text-decoration-none text-dark"
+              >
+                <img
+                  src="./assets/images/holding_phone.jpg"
+                  class="card-img-top rounded-top"
+                  alt="..."
+                />
               </a>
-              <a href="#" class="delete-btn">
-                <button type="button">delete</button>
-              </a>
-            </div>
-          </a>
-    </div>`
+              <div class="card-body">
+                <a
+                  href="./project-detail.html"
+                  class="text-decoration-none text-dark"
+                >
+                  <h5 class="card-title fs-6 fw-semibold">
+                    Dumbways Mobile App - 2022
+                  </h5>
+                  <div class="project-card-duration">
+                    <p>Duration : 3 Months</p>
+                  </div>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <div class="project-card-tech">
+                    <img
+                      class="pe-1"
+                      src="../public/assets/icons/playstore-color.png"
+                      alt=""
+                    />
+                    <img
+                      class="pe-1"
+                      src="../public/assets/icons/android-color.png"
+                      alt=""
+                    />
+                    <img
+                      class="ps-1"
+                      src="../public/assets/icons/javacolor.png"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                {{#if isLogin}}
+                <div
+                  class="project-card-actions d-flex mt-3 justify-content-betwee"
+                >
+                  <a
+                    href="#"
+                    class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold"
+                    >Edit</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-block btn-danger mt-2 rounded-5 w-100 ms-1 fw-semibold"
+                    >Delete</a
+                  >
+                </div>
+                {{/if}}
+              </div>
+            </div>`
 }

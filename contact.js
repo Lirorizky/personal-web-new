@@ -1,41 +1,55 @@
-function submitForm(){
+function submitForm() {
 
   const emailReceiver = "liro.zke@gmail.com";
 
   let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
+  let email = document.getElementById('email').value;
+  let phone = document.getElementById('phone').value;
   let subject = document.getElementById("subject").value;
-  let message = document.getElementById("message").value;
+  let message = document.getElementById('message').value;
 
+  // using variable to store values if the document.getElementById is 
+  //outside the function
+
+  // name = name.value;
+  // email = email.value;
+  // phone = phone.value;
+  // subject = subject.value;
+  // message = message.value;
+
+  // using object to store values :
+
+  
   let dataObject = {
     name: name,
     email: email,
-    phone: phone,
+    phoneNumber: phone,
     subject: subject,
-    message: message
-  }
+    message: message,
+  };
 
-  // validation input
+  // console.log(dataObject); logging
+
+  // validation value 
 
   if (name == "") {
-    return alert("name is required");
+    return alert("name must be filled in...");
   } else if (email == "") {
-    return alert("email is required");
-  } else if (phone == "") {
-    return alert("phone is required");
+    return alert("email must be filled in...");
+  } else if (phone == ""){
+    return alert("phone number must be filled in...")
   } else if (subject == "") {
-    return alert("subject is required");    
+    return alert("subject must be filled in...")
   } else if (message == "") {
-    return alert("message is required"); 
+    return alert("message must be filled in...")
   } else {
-    alert("Opening mail..");
+    alert("opening mail...")
   }
 
-  const a = document.createElement("a");
+  const a = document.createElement('a');
 
-  a.href = `mailto:${emailReceiver}?subject=${subject}&body=Hello, my name is ${name}, ${subject}, and here is my phone number : ${phone}. %0D%0A%0D%0A${message}`;
-  a.target = "_blank";
+  a.href = `mailto:${emailReceiver}?subject=${subject}&body=Hello my name is ${name}, ${subject}. %0D%0A%0D%0A${message}`;
+  a.target = '_blank';
   a.click();
 
 }
