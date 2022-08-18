@@ -34,10 +34,13 @@ div.base-card {
   height: 78%;
 }
 .p-bio {
-  font-size: 17px;
+  font-size: 1.1vw;
 }
 .dev {
   color: #62bbc1;
+}
+.header {
+  font-size: 2.6vw;
 }
 div.left-side {
   width: 55%;
@@ -52,6 +55,10 @@ div.image-container img {
   object-fit: cover;
 }
 
+.image-container h3,
+p {
+  font-size: 2vw;
+}
 /* cv css start */
 
 .cv-anchor:hover {
@@ -65,7 +72,7 @@ a.cv-anchor img {
 /* cv css end */
 
 .social-icons {
-  width: 33px;
+  width: 2.2vw;
 }
 .social-icons:hover {
   transform: scale(1.03);
