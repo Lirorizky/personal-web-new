@@ -92,18 +92,18 @@
               <h1 class="header text-start fw-bold">
                 Hi there, I'm Rhomes <span class="wave-emote">👋</span>
                 <span class="bio-header d-block">
-                  A <span class="dev">fullstack developer</span> based in Oslo,
-                  Norway
+                  A <span class="dev">fullstack developer</span> based in Jakarta,
+                  Indonesia
                 </span>
               </h1>
             </div>
 
             <div class="bio-container text-start">
               <p class="p-bio text-body mt-3">
-                I'm a passionate web developer with enthusiasm in developing an
-                accessible, scalable applications and working across the
-                fullstack. Currently looking for a role where I can grow and
-                learn from the more experienced team members.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Mollitia, eius. Maxime incidunt excepturi numquam voluptates
+                omnis ea suscipit odit quia nisi reiciendis explicabo inventore
+                deserunt, dolor voluptatem ex nemo dolore laborum.
                 <span class="d-block pt-3 fw-semibold">
                   Got a project to work on?
                 </span>
@@ -202,8 +202,9 @@
       <div class="">
         <section class="base-page-container-2">
           <h3 class="pt-5 m-0 text-center fw-semibold">My Project</h3>
-          <div class="project-showcase d-flex flex-wrap" id="project-showcase">
-            <div class="card shadow rounded-4 mt-5" style="width: 20rem">
+          <div class="project-showcase d-flex flex-wrap" id="project-showcase"> 
+            {{#each dataBlog}}
+            <div class="card shadow rounded-4 m-5" style="width: 20rem">
               <a
                 href="/project-detail/1"
                 class="text-decoration-none text-dark"
@@ -268,6 +269,77 @@
 
               </div>
             </div>
+            {{/each}}
+
+            {{!-- above is a dummy data --}}
+
+            {{!-- {{#each dataBlog}} --}}
+              {{!-- <div class="card shadow rounded-4 mt-5" style="width: 20rem">
+                <a
+                  href="/project-detail/1"
+                  class="text-decoration-none text-dark"
+                >
+                  <img
+                    src="../assets/images/holding_phone.jpg"
+                    class="card-img-top rounded-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="/project-detail/1"
+                    class="text-decoration-none text-dark"
+                  >
+                    <h5 class="card-title fs-6 fw-semibold">
+                      Dumbways Mobile App - 2022
+                    </h5>
+                    <div class="project-card-duration">
+                      <p>Duration : 3 Months</p>
+                    </div>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <div class="project-card-tech">
+                      <img
+                        class="pe-1"
+                        src="../assets/icons/playstore-color.png"
+                        alt=""
+                      />
+                      <img
+                        class="pe-1"
+                        src="../assets/icons/android-color.png"
+                        alt=""
+                      />
+                      <img
+                        class="ps-1"
+                        src="../assets/icons/javacolor.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+                  
+                  {{#if isLogin}}
+                  <div
+                    class="project-card-actions d-flex mt-3 justify-content-betwee"
+                  >
+                    <a
+                      href="#"
+                      class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold"
+                      >Edit</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-block btn-danger mt-2 rounded-5 w-100 ms-1 fw-semibold"
+                      >Delete</a
+                    >
+                  </div>
+                  {{else}}
+                  {{/if}}
+
+                </div>
+              </div> --}}
+            {{!-- {{/each}} --}}
           </div>
         </section>
       </div>

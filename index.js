@@ -10,9 +10,15 @@ app.use(express.urlencoded({ extended: false }));
   //to show the results inside the console
 
 const isLogin = true;
-let dataBlog = [];
 
-// get routes start
+let dataBlog = [
+  {
+    title: "dummy",
+    isLogin: true,
+  }
+];
+
+// -- GET ROUTES START -- --
 
 app.get('/', (req, res) => {
   res.render('index', {isLogin});
@@ -85,7 +91,7 @@ app.get('/project-detail/:id', (req, res) => {
   });
 })
 
-// -- post routes --
+// -- POST ROUTES START -- --
 
 app.post('/add-project', (req, res) => {
   // console.log(req.body);
@@ -110,7 +116,8 @@ app.post('/add-project', (req, res) => {
     endDate,
     projectDescription,
     techCheckbox,
-    projectUploadImage
+    projectUploadImage,
+    isLogin
   }
 
   dataBlog.push(projectInput)
@@ -118,6 +125,7 @@ app.post('/add-project', (req, res) => {
   res.redirect('/home');
 })
 
+// -- node listen --
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
