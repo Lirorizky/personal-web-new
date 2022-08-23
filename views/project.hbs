@@ -8,7 +8,7 @@
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,8 +42,8 @@
 
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="./assets/icons/dumbways_logo.png" alt="" />
+        <a class="navbar-brand" href="/home">
+          <img src="../assets/icons/dumbways_logo.png" alt="" />
         </a>
         <div
           class="collapse navbar-collapse d-flex justify-content-lg-between"
@@ -53,7 +53,7 @@
           <div class="left-side-nav">
             <ul class="navbar-nav me-auto ms-4 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link me-3" aria-current="page" href="./index.html"
+                <a class="nav-link me-3" aria-current="page" href="/home"
                   >Home</a
                 >
               </li>
@@ -61,7 +61,7 @@
                 <a
                   class="nav-link active active-page"
                   aria-current="page"
-                  href="./project.html"
+                  href="/add-project"
                   >Add project</a
                 >
               </li>
@@ -74,7 +74,7 @@
                 <a
                   class="contact-nav nav-link ms-3 btn btn-dark text-white rounded-pill pe-3 ps-3 pb-1 pt-1"
                   aria-current="page"
-                  href="./contact-form.html"
+                  href="/contact"
                   >Contact Me</a
                 >
               </li>
@@ -93,8 +93,9 @@
       <div class="align-center h-100 w-25">
         <form
           class="contact-form"
-          action="index.html"
+          action="/add-project"
           onsubmit="addProject(event)"
+          method="POST"
         >
           <h4 class="text-center mt-4">Add Project</h4>
 
@@ -108,6 +109,7 @@
               class="form-control project-input w-100 rounded-2 text-dark mb-2 shadow"
               id="project-name"
               aria-describedby="nameProjectHelp"
+              name="projectName"
             />
             <div id="nameProjectHelp" class="form-text">
               Please input the project name.
@@ -126,6 +128,7 @@
                 class="form-control project-input w-100 rounded-2 text-dark mb-2 shadow"
                 id="project-start-date"
                 aria-describedby="startDateHelp"
+                name="projectStartDate"
               />
             </div>
             <div class="right-date w-100 ms-1">
@@ -135,6 +138,7 @@
                 class="form-control project-input w-100 rounded-2 text-dark mb-2 shadow"
                 id="project-end-date"
                 aria-describedby="endDateHelp"
+                name="projectEndDate"
               />
             </div>
           </div>
@@ -150,6 +154,7 @@
               cols="10"
               id="project-description"
               style="height: 100px"
+              name="projectDescription"
             ></textarea>
             <label for="project-description">Description</label>
           </div>
@@ -168,7 +173,7 @@
                     class="form-check-input"
                     id="nodejs"
                     value="nodejs"
-                    name="tech-checkbox"
+                    name="techCheckbox"
                   />
                   <label class="form-check-label" for="nodejs">nodeJS</label>
                 </div>
@@ -178,7 +183,7 @@
                     class="form-check-input"
                     id="reactjs"
                     value="reactjs"
-                    name="tech-checkbox"
+                    name="techCheckbox"
                   />
                   <label class="form-check-label" for="reactjs">reactJS</label>
                 </div>
@@ -190,7 +195,7 @@
                     class="form-check-input"
                     id="nextjs"
                     value="nextjs"
-                    name="tech-checkbox"
+                    name="techCheckbox"
                   />
                   <label class="form-check-label" for="nextjs">nextJS</label>
                 </div>
@@ -200,7 +205,7 @@
                     class="form-check-input"
                     id="typescript"
                     value="typescript"
-                    name="tech-checkbox"
+                    name="techCheckbox"
                   />
                   <label class="form-check-label" for="typescript"
                     >typescript</label
@@ -217,6 +222,7 @@
               class="form-control w-100 rounded-2 text-dark mb-2 shadow"
               type="file"
               id="project-upload-image"
+              name="projectUploadImage"
             />
           </div>
           <div class="btn-container d-flex justify-content-end">
@@ -229,7 +235,7 @@
     </div>
     <!-- project form end -->
 
-    <script src="./project-form.js"></script>
+    <script src="../project-form.js"></script>
     <!-- <script src="./project-detail.js"></script> -->
   </body>
 </html>

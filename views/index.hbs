@@ -8,7 +8,7 @@
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,8 +37,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="./assets/icons/dumbways_logo.png" alt="" />
+        <a class="navbar-brand" href="/home">
+          <img src="../assets/icons/dumbways_logo.png" alt="" />
         </a>
         <div
           class="collapse navbar-collapse d-flex justify-content-lg-between"
@@ -50,12 +50,12 @@
                 <a
                   class="nav-link active me-3 active-page"
                   aria-current="page"
-                  href="./index.html"
+                  href="/home"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./project.html"
+                <a class="nav-link" aria-current="page" href="/add-project"
                   >Add project</a
                 >
               </li>
@@ -67,7 +67,7 @@
                 <a
                   class="contact-nav nav-link ms-3 btn btn-dark text-white rounded-pill pe-3 ps-3 pb-1 pt-1"
                   aria-current="page"
-                  href="./contact-form.html"
+                  href="/contact"
                   >Contact Me</a
                 >
               </li>
@@ -114,7 +114,7 @@
               <div>
                 <a
                   class="contact-anchor text-decoration-none btn btn-dark ps-4 pe-4 rounded-5 fw-semibold"
-                  href="./contact-form.html"
+                  href="/contact"
                 >
                   Let's Talk!
                 </a>
@@ -126,7 +126,7 @@
                 >
                   Download CV
                   <img
-                    src="./assets/icons/download.png"
+                    src="../assets/icons/download.png"
                     alt=""
                     class="download-img mb-2 ms-1"
                   />
@@ -140,7 +140,7 @@
                 class="social-anchor pe-3 pt-3"
               >
                 <img
-                  src="./assets/icons/linkedin64.png"
+                  src="../assets/icons/linkedin64.png"
                   alt=""
                   class="social-icons"
                 />
@@ -150,7 +150,7 @@
                 class="social-anchor ps-3 pe-3 pt-3"
               >
                 <img
-                  src="./assets/icons/instagram64.png"
+                  src="../assets/icons/instagram64.png"
                   alt=""
                   class="social-icons"
                 />
@@ -160,7 +160,7 @@
                 class="social-anchor ps-3 pe-3 pt-3"
               >
                 <img
-                  src="./assets/icons/fb64.png"
+                  src="../assets/icons/fb64.png"
                   alt=""
                   class="social-icons"
                 />
@@ -170,7 +170,7 @@
                 class="social-anchor ps-3 pt-3"
               >
                 <img
-                  src="./assets/icons/twitter64.png"
+                  src="../assets/icons/twitter64.png"
                   alt=""
                   class="social-icons"
                 />
@@ -184,7 +184,7 @@
             >
               <div class="image-container rounded w-100 d-flex flex-column p-0">
                 <img
-                  src="./assets/images/image3.jpg"
+                  src="../assets/images/image3.jpg"
                   alt=""
                   class="profile-picture w-100 rounded-top img-fluid"
                 />
@@ -205,18 +205,18 @@
           <div class="project-showcase d-flex flex-wrap" id="project-showcase">
             <div class="card shadow rounded-4 mt-5" style="width: 20rem">
               <a
-                href="./project-detail.html"
+                href="/project-detail/1"
                 class="text-decoration-none text-dark"
               >
                 <img
-                  src="./assets/images/holding_phone.jpg"
+                  src="../assets/images/holding_phone.jpg"
                   class="card-img-top rounded-top"
                   alt="..."
                 />
               </a>
               <div class="card-body">
                 <a
-                  href="./project-detail.html"
+                  href="/project-detail/1"
                   class="text-decoration-none text-dark"
                 >
                   <h5 class="card-title fs-6 fw-semibold">
@@ -232,21 +232,23 @@
                   <div class="project-card-tech">
                     <img
                       class="pe-1"
-                      src="./assets/icons/playstore-color.png"
+                      src="../assets/icons/playstore-color.png"
                       alt=""
                     />
                     <img
                       class="pe-1"
-                      src="./assets/icons/android-color.png"
+                      src="../assets/icons/android-color.png"
                       alt=""
                     />
                     <img
                       class="ps-1"
-                      src="./assets/icons/javacolor.png"
+                      src="../assets/icons/javacolor.png"
                       alt=""
                     />
                   </div>
                 </a>
+                
+                {{#if isLogin}}
                 <div
                   class="project-card-actions d-flex mt-3 justify-content-betwee"
                 >
@@ -261,6 +263,9 @@
                     >Delete</a
                   >
                 </div>
+                {{else}}
+                {{/if}}
+
               </div>
             </div>
           </div>

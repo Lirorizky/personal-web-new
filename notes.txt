@@ -24,3 +24,6 @@ theres two imporant things that I realize :
 
   this is because it will only be executed when the function is called
   which is through the onClick attribute on the submit button.
+
+
+  - nodemon is used in development stage only, not on the production stage / hosting

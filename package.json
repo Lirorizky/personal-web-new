@@ -1,0 +1,27 @@
+{
+  "name": "day-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lirorizky/personal-web-new.git"
+  },
+  "author": "liro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lirorizky/personal-web-new/issues"
+  },
+  "homepage": "https://github.com/Lirorizky/personal-web-new#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
