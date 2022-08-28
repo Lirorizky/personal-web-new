@@ -32,6 +32,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/duration.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -54,11 +55,13 @@
                   >Home</a
                 >
               </li>
+              {{#if isLogin}}
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/add-project"
                   >Add project</a
                 >
               </li>
+              {{/if}}
             </ul>
           </div>
           <div class="right-side-nav d-flex" role="search">
@@ -201,34 +204,33 @@
       </div>
       <div class="">
         <section class="base-page-container-2">
-          <h3 class="pt-5 m-0 text-center fw-semibold">My Project</h3>
+          <h3 class="pt-5 m-0 text-center fw-semibold">Projects I've Built..</h3>
           <div class="project-showcase d-flex flex-wrap" id="project-showcase"> 
-            {{#each dataBlog}}
+            {{#each project}}
             <div class="card shadow rounded-4 m-5" style="width: 20rem">
               <a
-                href="/project-detail/1"
+                href="/project-detail/{{@index}}"
                 class="text-decoration-none text-dark"
               >
                 <img
-                  src="../assets/images/holding_phone.jpg"
+                  src="../assets/images/{{this.projectUploadImage}}"
                   class="card-img-top rounded-top"
                   alt="..."
                 />
               </a>
               <div class="card-body">
                 <a
-                  href="/project-detail/1"
+                  href="/project-detail/{{@index}}"
                   class="text-decoration-none text-dark"
                 >
                   <h5 class="card-title fs-6 fw-semibold">
-                    Dumbways Mobile App - 2022
+                    {{this.projectName}}
                   </h5>
                   <div class="project-card-duration">
-                    <p>Duration : 3 Months</p>
+                    <p>{{this.duration}}</p>
                   </div>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {{this.projectDescription}}
                   </p>
                   <div class="project-card-tech">
                     <img
@@ -251,15 +253,15 @@
                 
                 {{#if isLogin}}
                 <div
-                  class="project-card-actions d-flex mt-3 justify-content-betwee"
+                  class="project-card-actions d-flex mt-3 justify-content-between"
                 >
                   <a
-                    href="#"
-                    class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold"
+                    href="/edit-project/{{@index}}"
+                    class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold button-action"
                     >Edit</a
                   >
                   <a
-                    href="#"
+                    href="/delete-project/{{@index}}"
                     class="btn btn-block btn-danger mt-2 rounded-5 w-100 ms-1 fw-semibold"
                     >Delete</a
                   >

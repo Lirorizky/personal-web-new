@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Project List</title>
+    <title>Edit Project</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -93,11 +93,11 @@
       <div class="align-center h-100 w-25">
         <form
           class="contact-form"
-          action="/add-project"
+          action="/edit-project/{{id}}"
           onsubmit="addProject(event)"
           method="POST"
         >
-          <h4 class="text-center mt-4">Add Project</h4>
+          <h4 class="text-center mt-4">Edit Project</h4>
 
           <!-- project name -->
           <div class="project-name-input mb-3">
@@ -110,6 +110,7 @@
               id="project-name"
               aria-describedby="nameProjectHelp"
               name="projectName"
+              value="{{data.projectName}}"
             />
             <div id="nameProjectHelp" class="form-text">
               Please input the project name.
@@ -129,6 +130,7 @@
                 id="project-start-date"
                 aria-describedby="startDateHelp"
                 name="projectStartDate"
+                value="{{data.startDate}}"
               />
             </div>
             <div class="right-date w-100 ms-1">
@@ -139,6 +141,7 @@
                 id="project-end-date"
                 aria-describedby="endDateHelp"
                 name="projectEndDate"
+                value="{{data.endDate}}"
               />
             </div>
           </div>
@@ -155,7 +158,7 @@
               id="project-description"
               style="height: 100px"
               name="projectDescription"
-            ></textarea>
+            >{{data.projectDescription}}</textarea>
             <label for="project-description">Description</label>
           </div>
 
@@ -174,6 +177,7 @@
                     id="nodejs"
                     value="nodejs.png"
                     name="techCheckbox"
+                    value="{{data.techCheckbox}}"
                   />
                   <label class="form-check-label" for="nodejs">nodeJS</label>
                 </div>
@@ -184,6 +188,7 @@
                     id="reactjs"
                     value="reactjs.png"
                     name="techCheckbox"
+                    value="{{data.techCheckbox}}"
                   />
                   <label class="form-check-label" for="reactjs">reactJS</label>
                 </div>
@@ -196,6 +201,7 @@
                     id="nextjs"
                     value="nextjs.png"
                     name="techCheckbox"
+                    value="{{data.techCheckbox}}"
                   />
                   <label class="form-check-label" for="nextjs">nextJS</label>
                 </div>
@@ -206,6 +212,7 @@
                     id="typescript"
                     value="typescript.png"
                     name="techCheckbox"
+                    value="{{data.techCheckbox}}"
                   />
                   <label class="form-check-label" for="typescript"
                     >typescript</label
@@ -223,11 +230,12 @@
               type="file"
               id="project-upload-image"
               name="projectUploadImage"
+              value="{{data.projectUploadImage}}"
             />
           </div>
           <div class="btn-container d-flex justify-content-end">
             <button type="submit" class="btn btn-primary ps-4 pe-4 rounded-5">
-              Add
+              Edit
             </button>
           </div>
         </form>
