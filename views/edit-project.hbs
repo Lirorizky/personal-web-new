@@ -93,7 +93,7 @@
       <div class="align-center h-100 w-25">
         <form
           class="contact-form"
-          action="/edit-project/{{id}}"
+          action="/edit-project/{{data.id}}"
           onsubmit="addProject(event)"
           method="POST"
         >
@@ -110,7 +110,7 @@
               id="project-name"
               aria-describedby="nameProjectHelp"
               name="projectName"
-              value="{{data.projectName}}"
+              value="{{data.project_name}}"
             />
             <div id="nameProjectHelp" class="form-text">
               Please input the project name.
@@ -130,7 +130,7 @@
                 id="project-start-date"
                 aria-describedby="startDateHelp"
                 name="projectStartDate"
-                value="{{data.startDate}}"
+                value="{{data.start_date}}"
               />
             </div>
             <div class="right-date w-100 ms-1">
@@ -141,7 +141,7 @@
                 id="project-end-date"
                 aria-describedby="endDateHelp"
                 name="projectEndDate"
-                value="{{data.endDate}}"
+                value="{{data.end_date}}"
               />
             </div>
           </div>
@@ -158,7 +158,7 @@
               id="project-description"
               style="height: 100px"
               name="projectDescription"
-            >{{data.projectDescription}}</textarea>
+            >{{data.description}}</textarea>
             <label for="project-description">Description</label>
           </div>
 
@@ -177,7 +177,7 @@
                     id="nodejs"
                     value="nodejs.png"
                     name="techCheckbox"
-                    value="{{data.techCheckbox}}"
+                    value="{{data.technologies}}"
                   />
                   <label class="form-check-label" for="nodejs">nodeJS</label>
                 </div>
@@ -188,7 +188,7 @@
                     id="reactjs"
                     value="reactjs.png"
                     name="techCheckbox"
-                    value="{{data.techCheckbox}}"
+                    value="{{data.technologies}}"
                   />
                   <label class="form-check-label" for="reactjs">reactJS</label>
                 </div>
@@ -201,7 +201,7 @@
                     id="nextjs"
                     value="nextjs.png"
                     name="techCheckbox"
-                    value="{{data.techCheckbox}}"
+                    value="{{data.technologies}}"
                   />
                   <label class="form-check-label" for="nextjs">nextJS</label>
                 </div>
@@ -212,7 +212,7 @@
                     id="typescript"
                     value="typescript.png"
                     name="techCheckbox"
-                    value="{{data.techCheckbox}}"
+                    value="{{data.technologies}}"
                   />
                   <label class="form-check-label" for="typescript"
                     >typescript</label
@@ -230,7 +230,7 @@
               type="file"
               id="project-upload-image"
               name="projectUploadImage"
-              value="{{data.projectUploadImage}}"
+              value="{{data.image}}"
             />
           </div>
           <div class="btn-container d-flex justify-content-end">

@@ -209,30 +209,37 @@
             {{#each project}}
             <div class="card shadow rounded-4 m-5" style="width: 20rem">
               <a
-                href="/project-detail/{{@index}}"
+                href="/project-detail/{{this.id}}"
                 class="text-decoration-none text-dark"
               >
                 <img
-                  src="../assets/images/{{this.projectUploadImage}}"
+                  src="../assets/images/{{this.image}}"
                   class="card-img-top rounded-top"
                   alt="..."
                 />
               </a>
               <div class="card-body">
                 <a
-                  href="/project-detail/{{@index}}"
+                  href="/project-detail/{{this.id}}"
                   class="text-decoration-none text-dark"
                 >
                   <h5 class="card-title fs-6 fw-semibold">
-                    {{this.projectName}}
+                    {{this.project_name}}
                   </h5>
                   <div class="project-card-duration">
                     <p>{{this.duration}}</p>
                   </div>
                   <p class="card-text">
-                    {{this.projectDescription}}
+                    {{this.description}}
                   </p>
                   <div class="project-card-tech">
+                    {{!-- {{#each this.technologies}}
+                    <img
+                      class="pe-1"
+                      src="../assets/icons/{{this.technologies}}.png"
+                      alt=""
+                    />
+                    {{/each}} --}}
                     <img
                       class="pe-1"
                       src="../assets/icons/playstore-color.png"
@@ -256,12 +263,12 @@
                   class="project-card-actions d-flex mt-3 justify-content-between"
                 >
                   <a
-                    href="/edit-project/{{@index}}"
+                    href="/edit-project/{{this.id}}"
                     class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold button-action"
                     >Edit</a
                   >
                   <a
-                    href="/delete-project/{{@index}}"
+                    href="/delete-project/{{this.id}}"
                     class="btn btn-block btn-danger mt-2 rounded-5 w-100 ms-1 fw-semibold"
                     >Delete</a
                   >

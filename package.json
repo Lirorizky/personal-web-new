@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Lirorizky/personal-web-new#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
+    "pg": "^8.8.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

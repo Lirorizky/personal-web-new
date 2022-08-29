@@ -1,3 +1,6 @@
+const db = require('./connection/db')
+
+
 function projectDurationTime(a, b){
   let projectStartAt = new Date(a);
   let projectEndAt = new Date(b);
