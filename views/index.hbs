@@ -218,7 +218,7 @@
                   alt="..."
                 />
               </a>
-              <div class="card-body">
+              <div class="card-body pb-5">
                 <a
                   href="/project-detail/{{this.id}}"
                   class="text-decoration-none text-dark"
@@ -229,10 +229,10 @@
                   <div class="project-card-duration">
                     <p>{{this.duration}}</p>
                   </div>
-                  <p class="card-text">
+                  <p class="card-text" style="margin-bottom: 80px;">
                     {{this.description}}
                   </p>
-                  <div class="project-card-tech">
+                  <div class="project-card-tech" style="position: absolute; bottom: 70px;">
                     {{!-- {{#each this.technologies}}
                     <img
                       class="pe-1"
@@ -260,16 +260,18 @@
                 
                 {{#if isLogin}}
                 <div
-                  class="project-card-actions d-flex mt-3 justify-content-between"
+                class="project-card-actions d-flex mt-3 justify-content-between align-self-end" 
                 >
                   <a
                     href="/edit-project/{{this.id}}"
-                    class="btn btn-block btn-outline-secondary mt-2 rounded-5 w-100 me-1 fw-semibold button-action"
+                    class="btn btn-block btn-outline-secondary mt-2 rounded-5 me-1 fw-semibold button-action mb-3"
+                    style="position: absolute; bottom: 0; width: 9vw"
                     >Edit</a
                   >
                   <a
                     href="/delete-project/{{this.id}}"
-                    class="btn btn-block btn-danger mt-2 rounded-5 w-100 ms-1 fw-semibold"
+                    class="btn btn-block btn-danger mt-auto rounded-5 ms-1 fw-semibold align-self-end mb-3 me-3"
+                    style="position: absolute; bottom: 0; right: 0; width: 9vw"
                     >Delete</a
                   >
                 </div>
