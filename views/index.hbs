@@ -17,6 +17,8 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <!-- bootstrap -->
     <!-- CSS -->
     <link
@@ -233,14 +235,15 @@
                     {{this.description}}
                   </p>
                   <div class="project-card-tech" style="position: absolute; bottom: 70px;">
-                    {{!-- {{#each this.technologies}}
-                    <img
+                    {{#each technologies}}
+                      <i class="fa-brands fa-{{this.technologies}}"></i>
+                    {{!-- <img
                       class="pe-1"
                       src="../assets/icons/{{this.technologies}}.png"
                       alt=""
-                    />
-                    {{/each}} --}}
-                    <img
+                    /> --}}
+                    {{/each}}
+                    {{!-- <img
                       class="pe-1"
                       src="../assets/icons/playstore-color.png"
                       alt=""
@@ -254,7 +257,7 @@
                       class="ps-1"
                       src="../assets/icons/javacolor.png"
                       alt=""
-                    />
+                    /> --}}
                   </div>
                 </a>
                 

@@ -1,0 +1,5 @@
+current problem :
+
+checkbox insert into db
+checkbox shown icon using font awesome
+catching edit value for the date and image
